@@ -77,6 +77,12 @@
     if (indexPath.section==0) {
         return CGSizeMake(80, 60);
     }
+    if (indexPath.section == 3 &&indexPath.row ==4) {
+        return CGSizeMake(160, 30);
+    }
+    if (indexPath.section == 3 &&indexPath.row ==5) {
+        return CGSizeMake(0, 30);
+    }
     return CGSizeMake(80, 30);
 }
 
