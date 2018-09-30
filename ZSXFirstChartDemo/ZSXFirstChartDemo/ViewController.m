@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "FCChartView.h"
+#import "FCChartCollectionViewCell.h"
 
 
 @interface ViewController ()<FCChartViewDataSource>
@@ -120,6 +121,7 @@
 - (FCChartView *)chartV{
     if (!_chartV) {
         _chartV = [[FCChartView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.height-200) type:FCChartViewTypeSectionAndRowFixation dataSource:self];
+        [_chartV registerClass:[FCChartCollectionViewCell class]];
     }
     return _chartV;
 }

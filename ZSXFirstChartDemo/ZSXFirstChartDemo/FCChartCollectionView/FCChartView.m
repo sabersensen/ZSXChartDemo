@@ -7,16 +7,9 @@
 //
 
 #import "FCChartView.h"
-#import "FCChartCollectionViewCell.h"
-#import "FCChartCollectionReusableView.h"
 #import "FCChartCollectionViewFlowLayout.h"
 
 static NSString *kMainCVDefaultCellIdentifier = @"kMainCVChartCollectionViewCell";
-static NSString *kMainCVHeaderIdentifier = @"kMainCVChartCollectionReusableView";
-static NSString *kAttachCVDefaultCellIdentifier = @"kAttachCVChartCollectionViewCell";
-static NSString *kAttachCVHeaderCellIdentifier = @"kkAttachCVChartCollectionReusableView";
-
-
 static NSInteger kMainCVTag = 19979754;
 
 @interface FCChartView()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,FCChartCollectionViewFlowLayoutDataSource>
@@ -71,6 +64,10 @@ static NSInteger kMainCVTag = 19979754;
     self.mainLayout.suspendSectionNum = self.suspendSection;
     [self.mainLayout reload];
     [self.mainCV reloadData];
+}
+
+- (void)registerClass:(nullable Class)cellClass{
+    [self.mainCV registerClass:cellClass forCellWithReuseIdentifier:kMainCVDefaultCellIdentifier];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -135,7 +132,7 @@ static NSInteger kMainCVTag = 19979754;
         if (@available(iOS 11.0, *)) {
             _mainCV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
-        [_mainCV registerClass:[FCChartCollectionViewCell class] forCellWithReuseIdentifier:kMainCVDefaultCellIdentifier];
+//        [_mainCV registerClass:[FCChartCollectionViewCell class] forCellWithReuseIdentifier:kMainCVDefaultCellIdentifier];
 
     }
     return _mainCV;

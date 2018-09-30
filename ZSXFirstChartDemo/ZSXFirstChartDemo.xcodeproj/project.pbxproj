@@ -7,28 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		693C47002160CEC500726A07 /* FCChartCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 693C46FD2160CEC500726A07 /* FCChartCollectionViewFlowLayout.m */; };
+		693C47012160CEC500726A07 /* FCChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 693C46FE2160CEC500726A07 /* FCChartView.m */; };
 		697BBF0A20D3A83D0097AA6C /* FCMaxOrMinLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 697BBF0920D3A83D0097AA6C /* FCMaxOrMinLayer.m */; };
 		6990DCCC20D0BEDA00AE6CED /* FCChartCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6990DCCB20D0BEDA00AE6CED /* FCChartCollectionViewCell.m */; };
-		6990DCCF20D0C02E00AE6CED /* FCChartCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6990DCCE20D0C02E00AE6CED /* FCChartCollectionReusableView.m */; };
-		6990DCD220D101A500AE6CED /* FCChartCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6990DCD120D101A500AE6CED /* FCChartCollectionViewFlowLayout.m */; };
 		69E2818D20CE580A0074FFD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E2818C20CE580A0074FFD3 /* AppDelegate.m */; };
 		69E2819020CE580A0074FFD3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E2818F20CE580A0074FFD3 /* ViewController.m */; };
 		69E2819320CE580A0074FFD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E2819120CE580A0074FFD3 /* Main.storyboard */; };
 		69E2819520CE580B0074FFD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69E2819420CE580B0074FFD3 /* Assets.xcassets */; };
 		69E2819820CE580B0074FFD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E2819620CE580B0074FFD3 /* LaunchScreen.storyboard */; };
 		69E2819B20CE580B0074FFD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E2819A20CE580B0074FFD3 /* main.m */; };
-		69E281A320CF5EDA0074FFD3 /* FCChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E281A220CF5EDA0074FFD3 /* FCChartView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		693C46FC2160CEC500726A07 /* FCChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCChartView.h; sourceTree = "<group>"; };
+		693C46FD2160CEC500726A07 /* FCChartCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCChartCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		693C46FE2160CEC500726A07 /* FCChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCChartView.m; sourceTree = "<group>"; };
+		693C46FF2160CEC500726A07 /* FCChartCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCChartCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		697BBF0820D3A83D0097AA6C /* FCMaxOrMinLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCMaxOrMinLayer.h; sourceTree = "<group>"; };
 		697BBF0920D3A83D0097AA6C /* FCMaxOrMinLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCMaxOrMinLayer.m; sourceTree = "<group>"; };
 		6990DCCA20D0BEDA00AE6CED /* FCChartCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCChartCollectionViewCell.h; sourceTree = "<group>"; };
 		6990DCCB20D0BEDA00AE6CED /* FCChartCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCChartCollectionViewCell.m; sourceTree = "<group>"; };
-		6990DCCD20D0C02E00AE6CED /* FCChartCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCChartCollectionReusableView.h; sourceTree = "<group>"; };
-		6990DCCE20D0C02E00AE6CED /* FCChartCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCChartCollectionReusableView.m; sourceTree = "<group>"; };
-		6990DCD020D101A500AE6CED /* FCChartCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCChartCollectionViewFlowLayout.h; sourceTree = "<group>"; };
-		6990DCD120D101A500AE6CED /* FCChartCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCChartCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		69E2818820CE580A0074FFD3 /* ZSXFirstChartDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZSXFirstChartDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E2818B20CE580A0074FFD3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		69E2818C20CE580A0074FFD3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,8 +38,6 @@
 		69E2819720CE580B0074FFD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69E2819920CE580B0074FFD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69E2819A20CE580B0074FFD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		69E281A120CF5EDA0074FFD3 /* FCChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCChartView.h; sourceTree = "<group>"; };
-		69E281A220CF5EDA0074FFD3 /* FCChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCChartView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +51,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		693C46FB2160CEC500726A07 /* FCChartCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				693C46FC2160CEC500726A07 /* FCChartView.h */,
+				693C46FE2160CEC500726A07 /* FCChartView.m */,
+				693C46FF2160CEC500726A07 /* FCChartCollectionViewFlowLayout.h */,
+				693C46FD2160CEC500726A07 /* FCChartCollectionViewFlowLayout.m */,
+			);
+			path = FCChartCollectionView;
+			sourceTree = "<group>";
+		};
 		69E2817F20CE580A0074FFD3 = {
 			isa = PBXGroup;
 			children = (
@@ -73,18 +81,13 @@
 		69E2818A20CE580A0074FFD3 /* ZSXFirstChartDemo */ = {
 			isa = PBXGroup;
 			children = (
+				693C46FB2160CEC500726A07 /* FCChartCollectionView */,
 				69E2818B20CE580A0074FFD3 /* AppDelegate.h */,
 				69E2818C20CE580A0074FFD3 /* AppDelegate.m */,
 				69E2818E20CE580A0074FFD3 /* ViewController.h */,
 				69E2818F20CE580A0074FFD3 /* ViewController.m */,
-				69E281A120CF5EDA0074FFD3 /* FCChartView.h */,
-				69E281A220CF5EDA0074FFD3 /* FCChartView.m */,
-				6990DCD020D101A500AE6CED /* FCChartCollectionViewFlowLayout.h */,
-				6990DCD120D101A500AE6CED /* FCChartCollectionViewFlowLayout.m */,
 				6990DCCA20D0BEDA00AE6CED /* FCChartCollectionViewCell.h */,
 				6990DCCB20D0BEDA00AE6CED /* FCChartCollectionViewCell.m */,
-				6990DCCD20D0C02E00AE6CED /* FCChartCollectionReusableView.h */,
-				6990DCCE20D0C02E00AE6CED /* FCChartCollectionReusableView.m */,
 				697BBF0820D3A83D0097AA6C /* FCMaxOrMinLayer.h */,
 				697BBF0920D3A83D0097AA6C /* FCMaxOrMinLayer.m */,
 				69E2819120CE580A0074FFD3 /* Main.storyboard */,
@@ -167,12 +170,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				697BBF0A20D3A83D0097AA6C /* FCMaxOrMinLayer.m in Sources */,
-				6990DCD220D101A500AE6CED /* FCChartCollectionViewFlowLayout.m in Sources */,
 				6990DCCC20D0BEDA00AE6CED /* FCChartCollectionViewCell.m in Sources */,
 				69E2819020CE580A0074FFD3 /* ViewController.m in Sources */,
+				693C47002160CEC500726A07 /* FCChartCollectionViewFlowLayout.m in Sources */,
 				69E2819B20CE580B0074FFD3 /* main.m in Sources */,
-				6990DCCF20D0C02E00AE6CED /* FCChartCollectionReusableView.m in Sources */,
-				69E281A320CF5EDA0074FFD3 /* FCChartView.m in Sources */,
+				693C47012160CEC500726A07 /* FCChartView.m in Sources */,
 				69E2818D20CE580A0074FFD3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

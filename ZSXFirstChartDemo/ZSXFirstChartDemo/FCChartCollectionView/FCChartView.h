@@ -71,7 +71,10 @@ typedef enum : NSUInteger {
 
 - (instancetype)initWithFrame:(CGRect)frame type:(FCChartViewType)type dataSource:(id<FCChartViewDataSource>)dataSource;
 
+- (void)registerClass:(nullable Class)cellClass;
+
 @property (nonatomic,weak)id <FCChartViewDataSource>dataSource;
+
 
 
 /**
