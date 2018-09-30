@@ -36,18 +36,14 @@
 #pragma mark - FCChartViewDataSource
 
 - (NSInteger)chartView:(FCChartView *)chartView numberOfItemsInSection:(NSInteger)section{
-    return 100;
+    return 300;
 }
 
 - (__kindof UICollectionViewCell *)collectionViewCell:(UICollectionViewCell *)collectionViewCell collectionViewType:(FCChartCollectionViewType)type cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     FCChartCollectionViewCell *cell = (FCChartCollectionViewCell *)collectionViewCell;
     cell.text = [NSString stringWithFormat:@"%ld-%ld",indexPath.section,indexPath.row];
     if (indexPath.section%2) {
-        if (indexPath.row%2) {
-            cell.cellType = FCChartCollectionViewCellTypeMin;
-        }else{
-            cell.cellType = FCChartCollectionViewCellTypeMax;
-        }
+        cell.cellType = FCChartCollectionViewCellTypeDefault;
         cell.textColor = [UIColor redColor];
 
     }else{
@@ -59,7 +55,7 @@
 
 
 - (NSInteger)numberOfSectionsInChartView:(FCChartView *)chartView{
-    return 100;
+    return 300;
 }
 
 - (NSInteger)numberOfSuspendSectionsInChartView:(FCChartView *)chartView{
@@ -72,20 +68,20 @@
 
 - (CGSize)chartView:(FCChartView *)chartView sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0 && indexPath.row == 0) {
-        return CGSizeMake(104, 50);
+        return CGSizeMake(90, 50);
     }
     // 学号
     if (indexPath.section == 0 && indexPath.row == 1) {
-        return CGSizeMake(170, 50);
+        return CGSizeMake(120, 50);
     }
     if (indexPath.section == 0) {
         return CGSizeMake(80, 50);
     }
     if (indexPath.row == 0) {
-        return CGSizeMake(104, 40);
+        return CGSizeMake(90, 40);
     }
     if (indexPath.row == 1) {
-        return CGSizeMake(170, 40);
+        return CGSizeMake(120, 40);
     }
     return CGSizeMake(80, 40);
 }
