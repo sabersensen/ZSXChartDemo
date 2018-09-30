@@ -132,6 +132,9 @@ static NSInteger kMainCVTag = 19979754;
         _mainCV.bounces = NO;
         _mainCV.showsHorizontalScrollIndicator = NO;
         _mainCV.showsVerticalScrollIndicator = NO;
+        if (@available(iOS 11.0, *)) {
+            _mainCV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
         [_mainCV registerClass:[FCChartCollectionViewCell class] forCellWithReuseIdentifier:kMainCVDefaultCellIdentifier];
 
     }

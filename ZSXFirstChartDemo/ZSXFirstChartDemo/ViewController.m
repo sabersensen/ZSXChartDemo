@@ -63,7 +63,7 @@
 }
 
 - (NSInteger)numberOfSuspendSectionsInChartView:(FCChartView *)chartView{
-    return 2;
+    return 1;
 }
 
 - (NSInteger)chartView:(FCChartView *)chartView numberOfSuspendItemsInSection:(NSInteger)section{
@@ -71,19 +71,23 @@
 }
 
 - (CGSize)chartView:(FCChartView *)chartView sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section==5) {
-        return CGSizeMake(80, 60);
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        return CGSizeMake(104, 50);
     }
-    if (indexPath.section==0) {
-        return CGSizeMake(80, 60);
+    // 学号
+    if (indexPath.section == 0 && indexPath.row == 1) {
+        return CGSizeMake(170, 50);
     }
-    if (indexPath.section == 3 &&indexPath.row ==4) {
-        return CGSizeMake(160, 30);
+    if (indexPath.section == 0) {
+        return CGSizeMake(80, 50);
     }
-    if (indexPath.section == 3 &&indexPath.row ==5) {
-        return CGSizeMake(0, 30);
+    if (indexPath.row == 0) {
+        return CGSizeMake(104, 40);
     }
-    return CGSizeMake(80, 30);
+    if (indexPath.row == 1) {
+        return CGSizeMake(170, 40);
+    }
+    return CGSizeMake(80, 40);
 }
 
 
