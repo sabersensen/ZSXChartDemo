@@ -83,6 +83,34 @@
     if (indexPath.row == 1) {
         return CGSizeMake(120, 40);
     }
+    // 合并单元格
+    if (indexPath.row ==3&&indexPath.section==3) {
+        return CGSizeMake(160, 40);
+    }
+    if (indexPath.row ==4&&indexPath.section==3) {
+        return CGSizeMake(0, 40);
+    }
+    
+    if (indexPath.row ==8&&indexPath.section==10) {
+        return CGSizeMake(160, 40);
+    }
+    if (indexPath.row ==9&&indexPath.section==10) {
+        return CGSizeMake(0, 40);
+    }
+    
+    if (indexPath.row ==2&&indexPath.section==5) {
+        return CGSizeMake(160, 80);
+    }
+    if (indexPath.row ==3&&indexPath.section==5) {
+        return CGSizeMake(0, 40);
+    }
+    if (indexPath.row ==2&&indexPath.section==6) {
+        return CGSizeMake(80, 0);
+    }
+    if (indexPath.row ==3&&indexPath.section==6) {
+        return CGSizeMake(80, 0);
+    }
+
     return CGSizeMake(80, 40);
 }
 

@@ -19,6 +19,7 @@
 @property (nonatomic,strong)UILabel *textLabel;
 
 
+
 @end
 
 @implementation FCChartCollectionViewCell
@@ -32,37 +33,55 @@
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    self.maxLayer.frame = CGRectMake(self.bounds.size.width/2, (self.bounds.size.height-15)/2, 36, 15);
-    self.minLayer.frame = CGRectMake(self.bounds.size.width/2, (self.bounds.size.height-15)/2, 36, 15);
+    self.textLabel.frame = self.bounds;
+//    self.maxLayer.frame = CGRectMake(self.bounds.size.width/2, (self.bounds.size.height-15)/2, 36, 15);
+//    self.minLayer.frame = CGRectMake(self.bounds.size.width/2, (self.bounds.size.height-15)/2, 36, 15);
 }
-
-- (void)drawRect:(CGRect)rect{
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetLineWidth(context, 0.5f);
-    CGContextSetStrokeColorWithColor(context, [UIColor lightGrayColor].CGColor);
-    CGContextBeginPath(context);
-    CGContextMoveToPoint(context, 0, 0);
-    CGContextAddLineToPoint(context, rect.size.width, 0);
-    CGContextAddLineToPoint(context, rect.size.width, rect.size.height);
-    CGContextAddLineToPoint(context, 0, rect.size.height);
-    CGContextAddLineToPoint(context,0, 0);
-    CGContextStrokePath(context);
-}
+//
+//- (void)drawRect:(CGRect)rect{
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//    CGContextSetLineWidth(context, 0.5f);
+//    CGContextSetStrokeColorWithColor(context, [UIColor lightGrayColor].CGColor);
+//    CGContextBeginPath(context);
+//    CGContextMoveToPoint(context, 0, 0);
+//    CGContextAddLineToPoint(context, rect.size.width, 0);
+//    CGContextAddLineToPoint(context, rect.size.width, rect.size.height);
+//    CGContextAddLineToPoint(context, 0, rect.size.height);
+//    CGContextAddLineToPoint(context,0, 0);
+//    CGContextStrokePath(context);
+//}
 
 #pragma mark - Private Methods
 
 - (void)configUI{
+    self.contentView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.contentView.layer.borderWidth = 0.5f;
     self.contentView.backgroundColor = [UIColor clearColor];
-    [self.contentView.layer addSublayer:self.textLayer];
-    [self.contentView.layer insertSublayer:self.maxLayer atIndex:0];
-    [self.contentView.layer insertSublayer:self.minLayer atIndex:0];
-
-    [self.maxLayer setNeedsDisplay];
-    [self.minLayer setNeedsDisplay];
-
+    [self.contentView addSubview:self.textLabel];
+//    [self.contentView.layer addSublayer:self.textLayer];
+//    [self.contentView.layer insertSublayer:self.maxLayer atIndex:0];
+//    [self.contentView.layer insertSublayer:self.minLayer atIndex:0];
+//
+//    [self.maxLayer setNeedsDisplay];
+//    [self.minLayer setNeedsDisplay];
+    self.contentView.clipsToBounds = YES;
+    self.clipsToBounds = YES;
 }
 
 #pragma mark - Getter Methods
+
+- (UILabel *)textLabel {
+    if (!_textLabel) {
+        _textLabel                 = [[UILabel alloc] init];
+        _textLabel.textAlignment   = NSTextAlignmentCenter;
+        _textLabel.textColor       = [UIColor blackColor];
+        _textLabel.lineBreakMode   = NSLineBreakByTruncatingTail;
+        _textLabel.font            = [UIFont systemFontOfSize:13];
+        _textLabel.numberOfLines   = 0;
+    }
+    return _textLabel;
+}
+
 
 - (CATextLayer *)textLayer{
     if (!_textLayer) {
@@ -108,12 +127,15 @@
 
 - (void)setText:(NSString *)text{
     _text = text;
-    self.textLayer.string = text;
+//    self.textLayer.string = text;
+    self.textLabel.text = text;
 }
 
 - (void)setTextColor:(UIColor *)textColor{
     _textColor = textColor;
-    self.textLayer.foregroundColor = textColor.CGColor;
+    self.textLabel.textColor = textColor;
+
+//    self.textLayer.foregroundColor = textColor.CGColor;
 }
 
 - (void)setCellType:(FCChartCollectionViewCellType)cellType{
@@ -121,7 +143,7 @@
     switch (cellType) {
         case FCChartCollectionViewCellTypeDefault:
         {
-            self.textLayer.frame = CGRectMake(0, (self.bounds.size.height-21)/2, self.bounds.size.width, 16);
+            self.textLayer.frame = self.bounds;
             self.minLayer.hidden = YES;
             self.maxLayer.hidden = YES;
             self.textLayer.alignmentMode = kCAAlignmentCenter;
